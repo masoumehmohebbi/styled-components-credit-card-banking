@@ -5,6 +5,8 @@ const GlobaloStyle = createGlobalStyle`
         &,
         &.light-mode {
         --background-app-rgb:61, 84, 77;
+        --color-primary-900:28, 28, 28;
+        --color-primary-800:26, 30, 28;
         --color-primary-100: 61, 84, 77;
         --color-primary-50: 128, 203, 134;
 
@@ -33,7 +35,9 @@ const GlobaloStyle = createGlobalStyle`
     font-family: "Vazir";
     min-height: 100vh;
     user-select: none;
-    background-color: rgb(var(--background-app-rgb));
+    background-color: rgb(var(--color-primary-900));
+ 
+
     }
 
     * {
@@ -70,12 +74,51 @@ const GlobaloStyle = createGlobalStyle`
 export default GlobaloStyle;
 
 export const Container = styled.div`
-  background-color: white;
+  background-image: url("images/dora.svg");
+  z-index: 110;
+  position: relative;
+
+  background-size: cover;
+  background-color: rgb(var(--color-primary-800));
+  overflow: hidden;
   margin: auto;
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  /* background: linear-gradient(rgb(128, 203, 134) 0%, rgba(28, 28, 28) 100%); */
+
   @media (min-width: 768px) {
     max-width: 1024px;
+  }
+`;
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+`;
+export const WrapperProcces = styled.div`
+  padding: 50px 0px;
+  display: grid;
+  gap: 60px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  & img {
+    width: 640px;
+    height: 389px;
+    margin-right: -75px;
+  }
+`;
+export const AboutBox = styled.div`
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  border-radius: 12px;
+  padding: 10px 60px;
+  background-color: rgb(var(--color-primary-100));
+  @media (min-width: 768px) {
+    max-width: 878px;
   }
 `;

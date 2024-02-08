@@ -1,6 +1,11 @@
 import { styled } from "styled-components";
-export const ButtonIcon = styled.button`
+import { Button } from "./Button";
+export const ButtonIcon = styled(Button)`
   display: flex;
-  padding: 1rem;
-  gap: 0px 10px;
+  align-items: center;
+
+  & img {
+    width: 20px;
+    height: 20px;
+  }
 `;
