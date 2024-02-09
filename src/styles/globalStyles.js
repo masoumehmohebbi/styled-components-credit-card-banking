@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { styled } from "styled-components";
+
 const GlobaloStyle = createGlobalStyle`
     :root {
         &,
@@ -45,11 +46,14 @@ const GlobaloStyle = createGlobalStyle`
     * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* border: none; */
     outline: none;
     padding: 0;
     margin: 0;
+    text-decoration: none;
     }
+    li {
+    list-style: none;
+  }
 
     @font-face {
     font-family: "Vazir";
@@ -97,9 +101,21 @@ export const Container = styled.div`
 `;
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
+
+  justify-content: ${(props) => props.varient === "primary" && "space-between"};
+  gap: ${(props) => (props.varient === "primary" ? "25px" : "10px")};
+
+  & .app-icon {
+    margin-right: 0px;
+
+    width: 110px;
+    height: 110px;
+  }
+  & span {
+    margin: 0px 20px;
+  }
 `;
 export const WrapperProcces = styled.div`
   padding: 50px 0px;
@@ -113,6 +129,25 @@ export const WrapperProcces = styled.div`
     margin-right: -75px;
   }
 `;
+export const WrapperFooter = styled.footer`
+  color: rgb(var(--color-secondary-0));
+  padding: 50px 0px;
+  display: grid;
+  gap: 60px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  & ul {
+    margin: 10px 0px;
+  }
+  & li {
+    cursor: pointer;
+    z-index: 9999;
+  }
+  & .col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+`;
+
 export const AboutBox = styled.div`
   margin: 0px auto;
   display: flex;
