@@ -1,6 +1,7 @@
 import GlobaloStyle, { Container } from "./styles/globalStyles";
 import CreateCard from "./ui/CreateCard";
 import FAQs from "./ui/FAQs";
+import FindCard from "./ui/FindCard";
 import Footer from "./ui/Footer";
 import Navbar from "./ui/Navbar";
 import Offer from "./ui/Offer";
@@ -15,6 +16,7 @@ function App() {
       <OurProcess />
       <Offer />
       <CreateCard />
+      <FindCard />
       <FAQs />
       <Footer />
     </Container>
