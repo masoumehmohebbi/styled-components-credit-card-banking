@@ -1,11 +1,11 @@
+import Accordion from "./Accordion";
 import { Heading } from "./Heading";
 
-const FAQs = () => {
+export default function FAQs() {
   return (
     <div>
       <Heading as="h4">سوالات متداول</Heading>
+      <Accordion />
     </div>
   );
-};
-
-export default FAQs;
+}

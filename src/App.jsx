@@ -7,6 +7,7 @@ import ManageFinance from "./ui/ManageFinance";
 import Navbar from "./ui/Navbar";
 import Offer from "./ui/Offer";
 import OurProcess from "./ui/OurProcess";
+import "./index.css";
 
 function App() {
   return (
