@@ -7,7 +7,8 @@ const GlobaloStyle = createGlobalStyle`
         --background-app-rgb:61, 84, 77;
         --color-primary-900:28, 28, 28;
         --color-primary-800:26, 30, 28;
-        --color-primary-100: 61, 84, 77;
+        /* --color-primary-100: 61, 84, 77; */
+        --color-primary-100: 34,43,40;
         --color-primary-50: 128, 203, 134;
 
         --color-secondary-50: 173, 178, 177;
@@ -16,6 +17,7 @@ const GlobaloStyle = createGlobalStyle`
         &.dark-mode {
         --color-secondary-900: 249, 250, 251;
         --color-secondary-800: 243, 244, 246;
+        
         --color-secondary-700: 229, 231, 235;
         --color-secondary-600: 209, 213, 219;
         --color-secondary-500: 156, 163, 175;
@@ -74,19 +76,21 @@ const GlobaloStyle = createGlobalStyle`
 export default GlobaloStyle;
 
 export const Container = styled.div`
-  background-image: url("images/dora.svg");
-  z-index: 110;
-  position: relative;
-
-  background-size: cover;
   background-color: rgb(var(--color-primary-800));
   overflow: hidden;
   margin: auto;
   max-width: 100%;
   display: flex;
+  position: relative;
   flex-direction: column;
-  /* background: linear-gradient(rgb(128, 203, 134) 0%, rgba(28, 28, 28) 100%); */
 
+  & .svg {
+    position: absolute;
+    background-position: fixed;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+  }
   @media (min-width: 768px) {
     max-width: 1024px;
   }
@@ -114,10 +118,22 @@ export const AboutBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0px;
-  border-radius: 12px;
-  padding: 10px 60px;
-  background-color: rgb(var(--color-primary-100));
+  padding-top: 10px;
+
+  background-color: ${(props) =>
+    props.varient === "boxPadding" && "rgb(var(--color-primary-100))"};
+
+  padding: ${(props) => props.varient === "boxPadding" && " 10px 60px"};
+
+  border-radius: ${(props) => props.varient === "boxPadding" && "12px"};
+
+  gap: ${(props) => props.varient !== "boxPadding" && "45px"};
+
+  & article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   @media (min-width: 768px) {
     max-width: 878px;
   }

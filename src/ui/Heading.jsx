@@ -24,12 +24,14 @@ export const Heading = styled.h1`
     css`
       font-size: 32px;
       font-weight: bold;
+      padding: 36px 0px;
     `}
     ${(props) =>
     props.as === "h5" &&
     css`
       font-size: 24px;
       font-weight: bold;
+      padding-bottom: 7px;
     `}
     
     ${(props) =>
