@@ -124,7 +124,7 @@ Error generating stack: `+i.message+`
   display: flex;
   position: relative;
   flex-direction: column;
-
+  padding: 0rem 1rem;
   background: linear-gradient(
     78deg,
     rgba(31, 77, 32, 1) 0%,
@@ -150,11 +150,13 @@ Error generating stack: `+i.message+`
   align-items: center;
   padding: 10px 0px;
   flex-wrap: wrap;
+  flex-direction: column;
 
   justify-content: ${e=>e.varient==="primary"&&"space-between"};
   gap: ${e=>e.varient==="primary"?"25px":"10px"};
 
   @media (min-width: 768px) {
+    flex-direction: row;
     flex-wrap: nowrap;
     display: ${e=>e.varient==="secondary"&&"none"};
     ${e=>e.varient==="s"&&xe`
@@ -244,9 +246,7 @@ Error generating stack: `+i.message+`
     `}
 
 
-
   margin: 0px auto;
-
   align-items: center;
   padding-top: 10px;
 
@@ -262,6 +262,11 @@ Error generating stack: `+i.message+`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.6rem 0rem;
+  }
+
+  & .user {
+    margin: 0rem 0.7rem;
   }
   @media (min-width: 768px) {
     max-width: 878px;
@@ -275,6 +280,7 @@ Error generating stack: `+i.message+`
   border: 1px solid rgb(var(--color-primary-50));
   color: rgb(var(--color-primary-50));
 `,cs=ie(kd)`
+  margin-top: 0.9rem;
   display: flex;
   align-items: center;
 
@@ -284,6 +290,7 @@ Error generating stack: `+i.message+`
   }
 `,Z=ie.h1`
   color: rgb(var(--color-secondary-0));
+  padding-bottom: 0.9rem;
   ${e=>e.as==="h1"&&xe`
       font-size: 56px;
       font-weight: bold;
@@ -385,7 +392,7 @@ Error generating stack: `+i.message+`
   /* &.accordion-item__chevron {
     rotate: 180deg;
   } */
-`;function v0(){return p.jsxs("div",{style:{padding:"45px 0px"},children:[p.jsx(Z,{as:"h4",children:"سوالات متداول"}),p.jsx(f0,{})]})}const y0="/styled-components-credit-card-banking/images/findCard.svg",ro="/styled-components-credit-card-banking/images/quotation.svg",w0="/styled-components-credit-card-banking/images/user-1.svg",x0="/styled-components-credit-card-banking/images/user-2.svg",S0="/styled-components-credit-card-banking/images/user-3.svg",k0=()=>p.jsxs(p.Fragment,{children:[p.jsxs(Ci,{children:[p.jsxs("div",{children:[p.jsx(Z,{as:"h3",children:"کارت اعتباری مناسب را برای خود پیدا کنید "}),p.jsx(X,{as:"sm",children:"کارت اعتباری ایده آل خود را به راحتی کشف کنید. انتخاب جامع ما پاسخگوی هر نیاز مالی و سبک زندگی است. فرقی نمی‌کند به دنبال پاداش‌های برگشت نقدی، هدیه‌های سفر یا اعتبار ساخت هستید، ما کارت اعتباری عالی در انتظار شما هستیم. فرصت ها را آزاد کنید و کارت اعتباری متناسب با اهداف و آرزوهای منحصر به فرد خود را بیابید."}),p.jsxs(cs,{children:[p.jsx(as,{}),"بیشتر بدانید"]})]}),p.jsx("img",{src:y0,alt:"Find Cridiet Card"})]}),p.jsxs(en,{children:[p.jsx(xt,{varient:"boxPadding",children:p.jsxs("article",{children:[p.jsx("img",{src:ro,alt:"quotate"}),p.jsx(X,{as:"sm",children:"جلسه عالی! دنی فوق العاده مفید بود. او توصیه های عملی را در مورد اینکه چگونه می توانیم خدمات lorem ip را اصلاح کنیم، به اشتراک گذاشت."}),p.jsx(xt,{children:p.jsxs("div",{style:{display:"flex"},children:[p.jsxs("article",{children:[p.jsx(Z,{as:"h5",children:"هادی امانی"}),p.jsx(X,{as:"sm",children:"طراح سایت"})]}),p.jsx("img",{style:{width:"40px",height:"40px"},src:w0,alt:"user 1"})]})})]})}),p.jsx(xt,{varient:"boxPadding",children:p.jsxs("article",{children:[p.jsx("img",{src:ro,alt:"quotation"}),p.jsx(X,{as:"sm",children:"جلسه عالی! دنی فوق العاده مفید بود. او توصیه های عملی را در مورد اینکه چگونه می توانیم خدمات lorem ip را اصلاح کنیم، به اشتراک گذاشت."}),p.jsx(xt,{children:p.jsxs("div",{style:{display:"flex"},children:[p.jsxs("article",{children:[p.jsx(Z,{as:"h5",children:"هادی امانی"}),p.jsx(X,{as:"sm",children:"طراح سایت"})]}),p.jsx("img",{style:{width:"40px",height:"40px"},src:x0,alt:"User 2"})]})})]})}),p.jsx(xt,{varient:"boxPadding",children:p.jsxs("article",{children:[p.jsx("img",{src:ro,alt:"quotate"}),p.jsx(X,{as:"sm",children:"جلسه عالی! دنی فوق العاده مفید بود. او توصیه های عملی را در مورد اینکه چگونه می توانیم خدمات lorem ip را اصلاح کنیم، به اشتراک گذاشت."}),p.jsx(xt,{children:p.jsxs("div",{style:{display:"flex"},children:[p.jsxs("article",{children:[p.jsx(Z,{as:"h5",children:"هانیه امانی"}),p.jsx(X,{as:"sm",children:"طراح سایت"})]}),p.jsx("img",{style:{width:"40px",height:"40px"},src:S0,alt:"User 3"})]})})]})})]})]}),Zt=ie.a`
+`;function v0(){return p.jsxs("div",{style:{padding:"45px 0px"},children:[p.jsx(Z,{as:"h4",children:"سوالات متداول"}),p.jsx(f0,{})]})}const y0="/styled-components-credit-card-banking/images/findCard.svg",ro="/styled-components-credit-card-banking/images/quotation.svg",w0="/styled-components-credit-card-banking/images/user-1.svg",x0="/styled-components-credit-card-banking/images/user-2.svg",S0="/styled-components-credit-card-banking/images/user-3.svg",k0=()=>p.jsxs(p.Fragment,{children:[p.jsxs(Ci,{children:[p.jsxs("div",{children:[p.jsx(Z,{as:"h3",children:"کارت اعتباری مناسب را برای خود پیدا کنید "}),p.jsx(X,{as:"sm",children:"کارت اعتباری ایده آل خود را به راحتی کشف کنید. انتخاب جامع ما پاسخگوی هر نیاز مالی و سبک زندگی است. فرقی نمی‌کند به دنبال پاداش‌های برگشت نقدی، هدیه‌های سفر یا اعتبار ساخت هستید، ما کارت اعتباری عالی در انتظار شما هستیم. فرصت ها را آزاد کنید و کارت اعتباری متناسب با اهداف و آرزوهای منحصر به فرد خود را بیابید."}),p.jsxs(cs,{children:[p.jsx(as,{}),"بیشتر بدانید"]})]}),p.jsx("img",{src:y0,alt:"Find Cridiet Card"})]}),p.jsxs(en,{children:[p.jsx(xt,{varient:"boxPadding",children:p.jsxs("article",{children:[p.jsx("img",{src:ro,alt:"quotate"}),p.jsx(X,{as:"sm",children:"جلسه عالی! دنی فوق العاده مفید بود. او توصیه های عملی را در مورد اینکه چگونه می توانیم خدمات lorem ip را اصلاح کنیم، به اشتراک گذاشت."}),p.jsx(xt,{children:p.jsxs("div",{style:{display:"flex"},children:[p.jsxs("article",{children:[p.jsx(Z,{as:"h5",children:"هادی امانی"}),p.jsx(X,{as:"sm",children:"طراح سایت"})]}),p.jsx("img",{className:"user",style:{width:"40px",height:"40px"},src:w0,alt:"user 1"})]})})]})}),p.jsx(xt,{varient:"boxPadding",children:p.jsxs("article",{children:[p.jsx("img",{src:ro,alt:"quotation"}),p.jsx(X,{as:"sm",children:"جلسه عالی! دنی فوق العاده مفید بود. او توصیه های عملی را در مورد اینکه چگونه می توانیم خدمات lorem ip را اصلاح کنیم، به اشتراک گذاشت."}),p.jsx(xt,{children:p.jsxs("div",{style:{display:"flex"},children:[p.jsxs("article",{children:[p.jsx(Z,{as:"h5",children:"هادی امانی"}),p.jsx(X,{as:"sm",children:"طراح سایت"})]}),p.jsx("img",{className:"user",style:{width:"40px",height:"40px"},src:x0,alt:"User 2"})]})})]})}),p.jsx(xt,{varient:"boxPadding",children:p.jsxs("article",{children:[p.jsx("img",{src:ro,alt:"quotate"}),p.jsx(X,{as:"sm",children:"جلسه عالی! دنی فوق العاده مفید بود. او توصیه های عملی را در مورد اینکه چگونه می توانیم خدمات lorem ip را اصلاح کنیم، به اشتراک گذاشت."}),p.jsx(xt,{children:p.jsxs("div",{style:{display:"flex"},children:[p.jsxs("article",{children:[p.jsx(Z,{as:"h5",children:"هانیه امانی"}),p.jsx(X,{as:"sm",children:"طراح سایت"})]}),p.jsx("img",{className:"user",style:{width:"40px",height:"40px"},src:S0,alt:"User 3"})]})})]})})]})]}),Zt=ie.a`
   color: rgb(var(--color-secondary-0));
   font-size: 16px;
 `,fs="/styled-components-credit-card-banking/logo.svg",E0=()=>p.jsxs(qm,{children:[p.jsxs("div",{className:"col-span-2",children:[p.jsxs(en,{children:[p.jsx("img",{src:fs,alt:""}),p.jsx(X,{as:"md",children:"گرین‌بانک"})]}),p.jsx(X,{as:"sm",children:"قدرت کارت های اعتباری امن و ارزشمند ما را کشف کنید"})]}),p.jsxs("ul",{children:[p.jsx(Z,{as:"h6",children:"درباره ما"}),p.jsx("li",{children:p.jsx(Zt,{href:"#",children:" سرمایه گذاران "})}),p.jsx("li",{children:p.jsx(Zt,{href:"#",children:" امکانات "})}),p.jsx("li",{children:p.jsx(Zt,{href:"#",children:" امنیت "})})]}),p.jsxs("ul",{children:[p.jsx(Z,{as:"h6",children:"محصولات"}),p.jsx("li",{children:"سرمایه گذاران"}),p.jsx("li",{children:"امکانات"}),p.jsx("li",{children:"امنیت"})]}),p.jsxs("ul",{children:[p.jsx(Z,{as:"h6",children:" لینک های مفید"}),p.jsx("li",{children:"سرمایه گذاران"}),p.jsx("li",{children:"امکانات"}),p.jsx("li",{children:"امنیت"})]}),p.jsxs("ul",{children:[p.jsx(Z,{as:"h6",children:"صفحات اجتماعی"}),p.jsx("li",{children:"سرمایه گذاران"}),p.jsx("li",{children:"امکانات"}),p.jsx("li",{children:"امنیت"})]})]}),C0="/styled-components-credit-card-banking/images/ManageFinance.svg",_0="/styled-components-credit-card-banking/images/App_Store.svg",j0="/styled-components-credit-card-banking/images/Google_Play.svg",P0=()=>p.jsxs(Ci,{children:[p.jsx("img",{src:C0,alt:""}),p.jsxs("div",{children:[p.jsx(Z,{as:"h3",children:"راه آسان برای مدیریت امور مالی "}),p.jsx(X,{as:"sm",children:"استفاده آسان از برنامه موبایلی که در اندروید و ios پشتیبانی می کند."}),p.jsxs(en,{children:[p.jsx("img",{className:"app-icon",src:_0,alt:"app store"}),p.jsx("img",{className:"app-icon",src:j0,alt:"google play"})]})]})]}),N0="/styled-components-credit-card-banking/images/offer-1.svg",z0="/styled-components-credit-card-banking/images/offer-2.svg",$0="/styled-components-credit-card-banking/images/offer-3.svg",O0=()=>p.jsxs("div",{children:[p.jsxs(xt,{varient:"boxPadding",children:[p.jsxs("article",{children:[p.jsx(Z,{as:"h3",children:"16y"}),p.jsx(X,{as:"sm",varient:"primary",children:"تجربه"})]}),p.jsxs("article",{children:[p.jsx(Z,{as:"h3",children:"250+"}),p.jsx(X,{as:"sm",varient:"primary",children:"شریک تجاری"})]}),p.jsxs("article",{children:[p.jsx(Z,{as:"h3",children:"18+"}),p.jsx(X,{as:"sm",varient:"primary",children:"سال تجربه"})]}),p.jsxs("article",{children:[p.jsx(Z,{as:"h3",children:"10.2k+"}),p.jsx(X,{as:"sm",varient:"primary",children:"مشتریان"})]})]}),p.jsxs("div",{style:{display:"flex",flexDirection:"column",width:"100%",alignItems:"center",padding:"50px 0px"},children:[p.jsx(Z,{as:"h4",children:"ما چه پیشنهادی میدیم؟"}),p.jsxs(xt,{varient:"primary",children:[p.jsxs("div",{style:{display:"flex"},children:[p.jsxs("article",{children:[p.jsx(Z,{as:"h5",children:"گارانتی امنیتی"}),p.jsx(X,{as:"sm",children:"داده ها و وجه شما به طور ایمن محافظت می شود."})]}),p.jsx("img",{style:{width:"40px",height:"40px"},src:N0,alt:"offer"})]}),p.jsxs("div",{style:{display:"flex"},children:[p.jsxs("article",{children:[p.jsx(Z,{as:"h5",children:"سرمایه گذاری"}),p.jsx(X,{as:"sm",children:"داده ها و وجه شما به طور ایمن محافظت می شود."})]}),p.jsx("img",{style:{width:"40px",height:"40px"},src:z0,alt:"offer"})]}),p.jsxs("div",{style:{display:"flex"},children:[p.jsxs("article",{children:[p.jsx(Z,{as:"h5",children:"چندین متد"}),p.jsx(X,{as:"sm",children:"داده ها و وجه شما به طور ایمن محافظت می شود."})]}),p.jsx("img",{style:{width:"40px",height:"40px"},src:$0,alt:"offer"})]})]})]})]}),T0="/styled-components-credit-card-banking/images/credit-cart.svg",R0=()=>p.jsxs(Ci,{children:[p.jsx("img",{src:T0,alt:""}),p.jsxs("div",{children:[p.jsx(Z,{as:"h2",children:"کارت اعتباری مناسب شما پیدا شد"}),p.jsx(X,{as:"sm",children:"قدرت کارت های اعتباری امن و ارزشمند ما را کشف کنید. طیف وسیعی از کارت های اعتباری ما را کاوش کنید و کنترل امور مالی خود را امروز در دست بگیرید."}),p.jsxs(cs,{children:[p.jsx(as,{}),"شروع کنید"]})]})]}),I0=ie.ul`
@@ -401,7 +408,6 @@ Error generating stack: `+i.message+`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-
   align-items: center;
   padding: 10px 1rem;
 
@@ -416,10 +422,6 @@ Error generating stack: `+i.message+`
     width: 300px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
-
-    li {
-      color: #fff;
-    }
   }
 `,L0=({open:e})=>p.jsx(I0,{open:e,children:p.jsxs(en,{varient:"s",children:[p.jsxs(en,{varient:"logo",children:[p.jsx("img",{src:fs,alt:""}),p.jsx(X,{as:"sm",children:"گرین‌بانک"})]}),p.jsxs(en,{children:[p.jsx("span",{children:p.jsx(Zt,{href:"#",children:"چرا ما "})}),p.jsx("span",{children:p.jsx(Zt,{href:"#",children:"پیشنهادات"})}),p.jsx("span",{children:p.jsx(Zt,{href:"#",children:"سوالات متداول"})}),p.jsx("span",{children:p.jsx(Zt,{href:"#",children:" خدمات "})})]}),p.jsx(kd,{children:"ارتباط با ما"})]})}),D0=ie.div`
   width: 1.3rem;
