@@ -46,6 +46,7 @@ const FindCard = () => {
                   <SubHeading as="sm">طراح سایت</SubHeading>
                 </article>
                 <img
+                  className="user"
                   style={{ width: "40px", height: "40px" }}
                   src={User1}
                   alt="user 1"
@@ -70,6 +71,7 @@ const FindCard = () => {
                   <SubHeading as="sm">طراح سایت</SubHeading>
                 </article>
                 <img
+                  className="user"
                   style={{ width: "40px", height: "40px" }}
                   src={User2}
                   alt="User 2"
@@ -94,6 +96,7 @@ const FindCard = () => {
                   <SubHeading as="sm">طراح سایت</SubHeading>
                 </article>
                 <img
+                  className="user"
                   style={{ width: "40px", height: "40px" }}
                   src={User3}
                   alt="User 3"

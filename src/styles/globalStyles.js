@@ -227,9 +227,7 @@ export const AboutBox = styled.div`
     `}
 
 
-
   margin: 0px auto;
-
   align-items: center;
   padding-top: 10px;
 
@@ -246,6 +244,11 @@ export const AboutBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.6rem 0rem;
+  }
+
+  & .user {
+    margin: 0rem 0.7rem;
   }
   @media (min-width: 768px) {
     max-width: 878px;
