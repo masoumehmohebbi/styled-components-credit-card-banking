@@ -122,6 +122,9 @@ export const Wrapper = styled.div`
   @media (min-width: 768px) {
     flex-wrap: nowrap;
   }
+  @media (max-width: 768px) {
+    display: ${(props) => props.varient === "logo" && "none"};
+  }
 
   & .app-icon {
     margin-right: 0px;
