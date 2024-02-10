@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { styled } from "styled-components";
+import { styled, css } from "styled-components";
 
 const GlobaloStyle = createGlobalStyle`
     :root {
@@ -39,8 +39,11 @@ const GlobaloStyle = createGlobalStyle`
     min-height: 100vh;
     user-select: none;
     background-color: rgb(var(--color-primary-900));
- 
 
+     /* style scrollbar  */
+    overflow-y: scroll;
+    scrollbar-color: rgb(var(--color-primary-50)) rgb(var(--color-primary-100));
+    scrollbar-width: thin;
     }
 
     * {
@@ -56,10 +59,6 @@ const GlobaloStyle = createGlobalStyle`
     list-style: none;
   }
   
-/* .accordion-item:not(:last-child) {
-  border-bottom: 1px solid #e0e2e5;
-} */
-
     @font-face {
     font-family: "Vazir";
     font-style: normal;
@@ -115,15 +114,24 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 10px 0px;
+  flex-wrap: wrap;
 
   justify-content: ${(props) => props.varient === "primary" && "space-between"};
   gap: ${(props) => (props.varient === "primary" ? "25px" : "10px")};
 
+  @media (min-width: 768px) {
+    flex-wrap: nowrap;
+  }
+
   & .app-icon {
     margin-right: 0px;
 
-    width: 110px;
-    height: 110px;
+    width: 70px;
+    height: 70px;
+    @media (min-width: 600px) {
+      width: 110px;
+      height: 110px;
+    }
   }
   & span {
     margin: 0px 20px;
@@ -136,9 +144,14 @@ export const WrapperProcces = styled.div`
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
   & img {
-    width: 640px;
-    height: 389px;
+    width: 340px;
+    height: 189px;
     margin-right: -75px;
+
+    @media (min-width: 768px) {
+      width: 640px;
+      height: 389px;
+    }
   }
 `;
 export const WrapperFooter = styled.footer`
@@ -146,7 +159,10 @@ export const WrapperFooter = styled.footer`
   padding: 50px 0px;
   display: grid;
   gap: 60px;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
 
   & ul {
     margin: 10px 0px;
@@ -161,9 +177,29 @@ export const WrapperFooter = styled.footer`
 `;
 
 export const AboutBox = styled.div`
+  ${(props) =>
+    props.varient === "primary" &&
+    css`
+      display: grid;
+      gap: 60px;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+      }
+    `}
+  ${(props) =>
+    props.varient !== "primary" &&
+    css`
+      display: flex;
+      justify-content: space-between;
+    `}
+
+
+
   margin: 0px auto;
-  display: flex;
-  justify-content: space-between;
+
   align-items: center;
   padding-top: 10px;
 

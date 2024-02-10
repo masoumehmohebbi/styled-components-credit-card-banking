@@ -42,7 +42,7 @@ const Offer = () => {
         }}
       >
         <Heading as="h4">ما چه پیشنهادی میدیم؟</Heading>
-        <AboutBox>
+        <AboutBox varient="primary">
           <div style={{ display: "flex" }}>
             <article>
               <Heading as="h5">گارانتی امنیتی</Heading>

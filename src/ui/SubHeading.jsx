@@ -14,7 +14,12 @@ export const SubHeading = styled.h1`
         props.varient === "primary"
           ? "rgb(var(--color-primary-50))"
           : "rgb(var(--color-secondary-0))"};
-      font-size: 16px;
+
+      font-size: 13px;
       font-weight: normal;
+      @media (min-width: 768px) {
+        font-size: 16px;
+        font-weight: normal;
+      }
     `}
 `;
