@@ -152,7 +152,6 @@ export const Wrapper = styled.div`
 
   & .app-icon {
     margin-right: 0px;
-
     width: 70px;
     height: 70px;
     @media (min-width: 600px) {
@@ -168,8 +167,8 @@ export const WrapperProcces = styled.div`
   margin-top: 1rem;
   padding: 50px 0px;
   display: grid;
-  gap: 50px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 60px;
 
   & img {
     width: 340px;
@@ -181,7 +180,6 @@ export const WrapperProcces = styled.div`
       height: 289px;
     }
     @media (min-width: 1024px) {
-      gap: 60px;
       width: 640px;
       height: 389px;
     }
