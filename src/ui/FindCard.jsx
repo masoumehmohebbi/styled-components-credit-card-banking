@@ -56,7 +56,7 @@ const FindCard = () => {
         </AboutBox>
         <AboutBox varient="boxPadding">
           <article>
-            <img src="/images/quotation.svg" alt="quotation" />
+            <img src={Quotate} alt="quotation" />
             <SubHeading as="sm">
               جلسه عالی! دنی فوق العاده مفید بود. او توصیه های عملی را در مورد
               اینکه چگونه می توانیم خدمات lorem ip را اصلاح کنیم، به اشتراک
@@ -80,7 +80,7 @@ const FindCard = () => {
         </AboutBox>
         <AboutBox varient="boxPadding">
           <article>
-            <img src="/images/quotation.svg" alt="" />
+            <img src={Quotate} alt="quotate" />
             <SubHeading as="sm">
               جلسه عالی! دنی فوق العاده مفید بود. او توصیه های عملی را در مورد
               اینکه چگونه می توانیم خدمات lorem ip را اصلاح کنیم، به اشتراک
@@ -90,7 +90,7 @@ const FindCard = () => {
             <AboutBox>
               <div style={{ display: "flex" }}>
                 <article>
-                  <Heading as="h5">هادی امانی</Heading>
+                  <Heading as="h5">هانیه امانی</Heading>
                   <SubHeading as="sm">طراح سایت</SubHeading>
                 </article>
                 <img
