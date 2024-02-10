@@ -1,6 +1,6 @@
 # Credit Card 💳💰
 
-<h1>This is a landing page that developped with Styled-Components and React-Js.</h1>
+<h2>This is a landing page that developped with Styled-Components and React-Js.</h2>
  
    <h2>📦 Used Packages</h2>
    <ul>
