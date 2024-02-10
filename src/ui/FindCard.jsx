@@ -4,6 +4,10 @@ import { ButtonIcon } from "./ButtonIcon";
 import { Heading } from "./Heading";
 import { SubHeading } from "./SubHeading";
 import FindCridietCard from "/images/findCard.svg";
+import Quotate from "/images/quotation.svg";
+import User1 from "/images/user-1.svg";
+import User2 from "/images/user-2.svg";
+import User3 from "/images/user-3.svg";
 
 const FindCard = () => {
   return (
@@ -23,12 +27,12 @@ const FindCard = () => {
             بیشتر بدانید
           </ButtonIcon>
         </div>
-        <img src={FindCridietCard} alt="" />
+        <img src={FindCridietCard} alt="Find Cridiet Card" />
       </WrapperProcces>
       <Wrapper>
         <AboutBox varient="boxPadding">
           <article>
-            <img src="/images/quotation.svg" alt="" />
+            <img src={Quotate} alt="quotate" />
             <SubHeading as="sm">
               جلسه عالی! دنی فوق العاده مفید بود. او توصیه های عملی را در مورد
               اینکه چگونه می توانیم خدمات lorem ip را اصلاح کنیم، به اشتراک
@@ -43,8 +47,32 @@ const FindCard = () => {
                 </article>
                 <img
                   style={{ width: "40px", height: "40px" }}
-                  src="/images/user-1.svg"
-                  alt=""
+                  src={User1}
+                  alt="user 1"
+                />
+              </div>
+            </AboutBox>
+          </article>
+        </AboutBox>
+        <AboutBox varient="boxPadding">
+          <article>
+            <img src="/images/quotation.svg" alt="quotation" />
+            <SubHeading as="sm">
+              جلسه عالی! دنی فوق العاده مفید بود. او توصیه های عملی را در مورد
+              اینکه چگونه می توانیم خدمات lorem ip را اصلاح کنیم، به اشتراک
+              گذاشت.
+            </SubHeading>
+
+            <AboutBox>
+              <div style={{ display: "flex" }}>
+                <article>
+                  <Heading as="h5">هادی امانی</Heading>
+                  <SubHeading as="sm">طراح سایت</SubHeading>
+                </article>
+                <img
+                  style={{ width: "40px", height: "40px" }}
+                  src={User2}
+                  alt="User 2"
                 />
               </div>
             </AboutBox>
@@ -67,32 +95,8 @@ const FindCard = () => {
                 </article>
                 <img
                   style={{ width: "40px", height: "40px" }}
-                  src="/images/user-2.svg"
-                  alt=""
-                />
-              </div>
-            </AboutBox>
-          </article>
-        </AboutBox>
-        <AboutBox varient="boxPadding">
-          <article>
-            <img src="/images/quotation.svg" alt="" />
-            <SubHeading as="sm">
-              جلسه عالی! دنی فوق العاده مفید بود. او توصیه های عملی را در مورد
-              اینکه چگونه می توانیم خدمات lorem ip را اصلاح کنیم، به اشتراک
-              گذاشت.
-            </SubHeading>
-
-            <AboutBox>
-              <div style={{ display: "flex" }}>
-                <article>
-                  <Heading as="h5">هادی امانی</Heading>
-                  <SubHeading as="sm">طراح سایت</SubHeading>
-                </article>
-                <img
-                  style={{ width: "40px", height: "40px" }}
-                  src="/images/user-3.svg"
-                  alt=""
+                  src={User3}
+                  alt="User 3"
                 />
               </div>
             </AboutBox>
