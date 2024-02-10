@@ -138,12 +138,15 @@ export const Wrapper = styled.div`
   }
   @media (max-width: 768px) {
     display: ${(props) => props.varient === "logo" && "none"};
+    flex-direction: ${(props) => props.varient === "logoFooter" && "row"};
+
     ${(props) =>
       props.varient === "secondary" &&
       css`
         position: fixed;
         left: 15px;
         top: 1px;
+        flex-direction: row;
       `};
   }
 

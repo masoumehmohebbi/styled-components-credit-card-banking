@@ -29,10 +29,6 @@ const Nav = styled.nav`
 
 const Navbar2 = () => {
   return (
-    // <Nav>
-    //   <div className="logo">Nav Bar</div>
-    //   <Burger />
-    // </Nav>
     <Nav>
       <Wrapper varient="secondary">
         <img src={Logo} alt="logo" />

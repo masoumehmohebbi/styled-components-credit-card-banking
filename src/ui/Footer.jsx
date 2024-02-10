@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <WrapperFooter>
       <div className="col-span-2">
-        <Wrapper>
+        <Wrapper varient="logoFooter">
           <img src={Logo} alt="" />
           <SubHeading as="md">گرین‌بانک</SubHeading>
         </Wrapper>
