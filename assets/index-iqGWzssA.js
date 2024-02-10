@@ -179,7 +179,6 @@ Error generating stack: `+i.message+`
 
   & .app-icon {
     margin-right: 0px;
-
     width: 70px;
     height: 70px;
     @media (min-width: 600px) {
@@ -194,8 +193,8 @@ Error generating stack: `+i.message+`
   margin-top: 1rem;
   padding: 50px 0px;
   display: grid;
-  gap: 50px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 60px;
 
   & img {
     width: 340px;
@@ -207,7 +206,6 @@ Error generating stack: `+i.message+`
       height: 289px;
     }
     @media (min-width: 1024px) {
-      gap: 60px;
       width: 640px;
       height: 389px;
     }
