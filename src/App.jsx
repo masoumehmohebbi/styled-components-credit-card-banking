@@ -12,7 +12,8 @@ import Navbar2 from "./ui/Nav";
 function App() {
   return (
     <Container>
-      <img className="svg" src="images/dora.svg" alt="dora" />
+      {/* <img className="svg" src="images/dora.svg" alt="dora" /> */}
+      <div className="foo"></div>
       <GlobaloStyle />
       {/* <Navbar /> */}
 

@@ -1,18 +1,29 @@
-import React from "react";
 import styled from "styled-components";
 import Burger from "./Burger";
+import { Wrapper } from "../styles/globalStyles";
+import { SubHeading } from "./SubHeading";
+import Logo from "/logo.svg";
 
 const Nav = styled.nav`
-  width: 100%;
-  background-color: #fff;
+  position: fixed;
+  top: 0px;
+  right: 0px;
   height: 55px;
-  /* border-bottom: 2px solid #f1f1f1; */
-  /* padding: 0 20px; */
   display: flex;
-  justify-content: space-between;
-
-  .logo {
-    padding: 15px 0;
+  width: 100%;
+  @media (max-width: 768px) {
+    width: 100%;
+    background: linear-gradient(
+      78deg,
+      rgba(31, 77, 32, 1) 0%,
+      rgba(26, 30, 28, 1) 100%
+    );
+    padding: 1rem 0rem 1rem 1rem;
+    position: fixed;
+    top: 0px;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
   }
 `;
 
@@ -22,7 +33,13 @@ const Navbar2 = () => {
     //   <div className="logo">Nav Bar</div>
     //   <Burger />
     // </Nav>
-    <Burger />
+    <Nav>
+      <Wrapper varient="secondary">
+        <img src={Logo} alt="logo" />
+        <SubHeading as="sm">گرین‌بانک</SubHeading>
+      </Wrapper>
+      <Burger />
+    </Nav>
   );
 };
 

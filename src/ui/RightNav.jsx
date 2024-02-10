@@ -6,17 +6,21 @@ import Logo from "/logo.svg";
 import styled from "styled-components";
 
 const Ul = styled.ul`
+  width: 100%;
+  background: linear-gradient(
+    78deg,
+    rgba(31, 77, 32, 1) 0%,
+    rgba(26, 30, 28, 1) 100%
+  );
+
+  right: 0px;
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 
   align-items: center;
-  padding: 10px 0px;
-
-  li {
-    padding: 18px 10px;
-  }
+  padding: 10px 1rem;
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
@@ -39,27 +43,27 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      {/* <Wrapper varient="primary"> */}
-      <Wrapper varient="logo">
-        <img src={Logo} alt="" />
-        <SubHeading as="sm">گرین‌بانک</SubHeading>
+      <Wrapper varient="s">
+        <Wrapper varient="logo">
+          <img src={Logo} alt="" />
+          <SubHeading as="sm">گرین‌بانک</SubHeading>
+        </Wrapper>
+        <Wrapper>
+          <span>
+            <Link href="#">چرا ما </Link>
+          </span>
+          <span>
+            <Link href="#">پیشنهادات</Link>
+          </span>
+          <span>
+            <Link href="#">سوالات متداول</Link>
+          </span>
+          <span>
+            <Link href="#"> خدمات </Link>
+          </span>
+        </Wrapper>
+        <Button>ارتباط با ما</Button>
       </Wrapper>
-      <Wrapper>
-        <span>
-          <Link href="#">چرا ما </Link>
-        </span>
-        <span>
-          <Link href="#">پیشنهادات</Link>
-        </span>
-        <span>
-          <Link href="#">سوالات متداول</Link>
-        </span>
-        <span>
-          <Link href="#"> خدمات </Link>
-        </span>
-      </Wrapper>
-      <Button>ارتباط با ما</Button>
-      {/* </Wrapper> */}
     </Ul>
   );
 };

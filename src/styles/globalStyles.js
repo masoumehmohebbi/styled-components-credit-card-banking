@@ -91,7 +91,6 @@ export const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  padding: 0rem 1rem 1rem 1rem;
 
   background: linear-gradient(
     78deg,
@@ -105,11 +104,20 @@ export const Container = styled.div`
     background-size: cover;
     overflow: hidden;
     width: 100%;
+    background-repeat: repeat;
+    top: 5rem;
+  }
+  & .foo {
+    width: 100%;
+    position: absolute;
+    background-image: url("/images/dora.svg");
   }
   @media (min-width: 768px) {
     max-width: 1024px;
+    padding: 0rem 1rem 1rem 1rem;
   }
 `;
+
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
@@ -121,9 +129,24 @@ export const Wrapper = styled.div`
 
   @media (min-width: 768px) {
     flex-wrap: nowrap;
+    display: ${(props) => props.varient === "secondary" && "none"};
+    ${(props) =>
+      props.varient === "s" &&
+      css`
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      `};
   }
   @media (max-width: 768px) {
     display: ${(props) => props.varient === "logo" && "none"};
+    ${(props) =>
+      props.varient === "secondary" &&
+      css`
+        position: fixed;
+        left: 15px;
+        top: 1px;
+      `};
   }
 
   & .app-icon {
@@ -141,9 +164,10 @@ export const Wrapper = styled.div`
   }
 `;
 export const WrapperProcces = styled.div`
+  margin-top: 1rem;
   padding: 50px 0px;
   display: grid;
-  gap: 60px;
+  gap: 50px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
   & img {
@@ -152,6 +176,11 @@ export const WrapperProcces = styled.div`
     margin-right: -75px;
 
     @media (min-width: 768px) {
+      width: 540px;
+      height: 289px;
+    }
+    @media (min-width: 1024px) {
+      gap: 60px;
       width: 640px;
       height: 389px;
     }
