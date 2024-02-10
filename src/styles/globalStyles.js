@@ -51,9 +51,14 @@ const GlobaloStyle = createGlobalStyle`
     margin: 0;
     text-decoration: none;
     }
+
     li {
     list-style: none;
   }
+  
+/* .accordion-item:not(:last-child) {
+  border-bottom: 1px solid #e0e2e5;
+} */
 
     @font-face {
     font-family: "Vazir";
@@ -87,6 +92,13 @@ export const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
+  padding: 0rem 1rem 1rem 1rem;
+
+  background: linear-gradient(
+    78deg,
+    rgba(31, 77, 32, 1) 0%,
+    rgba(26, 30, 28, 1) 100%
+  );
 
   & .svg {
     position: absolute;

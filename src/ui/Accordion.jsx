@@ -1,64 +1,62 @@
 import { useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { HiMinus, HiPlus } from "react-icons/hi";
+import { Heading } from "./Heading";
+import { SubHeading } from "./SubHeading";
+import { styled } from "styled-components";
+
 const data = [
   {
     id: 1,
-    title: "Accordion One",
-    text: "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus quae fuga totam recusandae voluptate minus id aliquam possimus minima reprehenderit inventore fugiat voluptatem sequi, maiores accusantium animi doloribus similique tempore.",
+    title: "برای درخواست کارت اعتباری به چه امتیاز اعتباری نیاز دارم؟",
+    text: "  امتیاز اعتباری مورد نیاز ممکن است بسته به کارت اعتباری خاص متفاوت باشد. به طور کلی، نمره اعتباری خوب تا عالی (معمولاً 670 یا بالاتر) شانس تأیید شما را برای کارت های اعتباری ممتاز افزایش می دهد.",
   },
   {
     id: 2,
-    title: "Accordion Two",
-    text: "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus quae fuga totam recusandae voluptate minus id aliquam possimus minima reprehenderit inventore fugiat voluptatem sequi, maiores accusantium animi doloribus similique tempore.",
+    title: "چگونه می توانم برای کارت اعتباری آنلاین اقدام کنم؟",
+    text: "  امتیاز اعتباری مورد نیاز ممکن است بسته به کارت اعتباری خاص متفاوت باشد. به طور کلی، نمره اعتباری خوب تا عالی (معمولاً 670 یا بالاتر) شانس تأیید شما را برای کارت های اعتباری ممتاز افزایش می دهد.",
   },
   {
     id: 3,
-    title: "Accordion Three",
-    text: "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus quae fuga totam recusandae voluptate minus id aliquam possimus minima reprehenderit inventore fugiat voluptatem sequi, maiores accusantium animi doloribus similique tempore.",
+    title: "آیا هزینه های سالانه مربوط به کارت اعتباری وجود دارد؟",
+    text: "  امتیاز اعتباری مورد نیاز ممکن است بسته به کارت اعتباری خاص متفاوت باشد. به طور کلی، نمره اعتباری خوب تا عالی (معمولاً 670 یا بالاتر) شانس تأیید شما را برای کارت های اعتباری ممتاز افزایش می دهد.",
+  },
+  {
+    id: 4,
+    title: "پس از تایید کارت اعتباری چقدر طول می کشد؟",
+    text: "  امتیاز اعتباری مورد نیاز ممکن است بسته به کارت اعتباری خاص متفاوت باشد. به طور کلی، نمره اعتباری خوب تا عالی (معمولاً 670 یا بالاتر) شانس تأیید شما را برای کارت های اعتباری ممتاز افزایش می دهد.",
+  },
+  {
+    id: 5,
+    title: "چگونه می توانم موجودی کارت اعتباری و تراکنش های خود را بررسی کنم؟",
+    text: "  امتیاز اعتباری مورد نیاز ممکن است بسته به کارت اعتباری خاص متفاوت باشد. به طور کلی، نمره اعتباری خوب تا عالی (معمولاً 670 یا بالاتر) شانس تأیید شما را برای کارت های اعتباری ممتاز افزایش می دهد.",
+  },
+  {
+    id: 6,
+    title: "اگر کارت اعتباری من گم یا دزدیده شد چه کار باید بکنم؟",
+    text: "  امتیاز اعتباری مورد نیاز ممکن است بسته به کارت اعتباری خاص متفاوت باشد. به طور کلی، نمره اعتباری خوب تا عالی (معمولاً 670 یا بالاتر) شانس تأیید شما را برای کارت های اعتباری ممتاز افزایش می دهد.",
   },
 ];
 
 function Accordion() {
-  const [open, setOpen] = useState(null); // 1,2,3...
-
+  const [open, setOpen] = useState(null);
   const handleOpen = (id) => {
     setOpen(id === open ? null : id);
   };
 
   return (
-    <div className="accordion">
+    <WrapperAccordion>
       {data.map((item) => (
         <AccordionItem
           key={item.id}
           id={item.id}
           title={item.title}
           onOpen={handleOpen}
-          // setOpen={setOpen}
           open={open}
         >
           {item.text}
         </AccordionItem>
       ))}
-      <AccordionItem
-        id={4}
-        title="Another Accordion"
-        onOpen={handleOpen}
-        // setOpen={setOpen}
-        open={open}
-      >
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
-          blanditiis maiores fugit reprehenderit accusamus vitae voluptate
-          perferendis labore debitis. Quae tempora cumque laudantium hic
-          consequatur natus qui deleniti id commodi?
-        </p>
-        <ul>
-          <li>one</li>
-          <li>two</li>
-        </ul>
-        <a href="#">Dummy Link !</a>
-      </AccordionItem>
-    </div>
+    </WrapperAccordion>
   );
 }
 
@@ -68,24 +66,72 @@ function AccordionItem({ id, title, setOpen, open, onOpen, children }) {
   const isOpen = id === open;
 
   return (
-    <div className={`accordion-item ${isOpen ? "accordion__expanded" : ""}`}>
-      <div
-        className="accordion-item__header"
-        // onClick={() => setOpen(item.id)}
-        onClick={() => onOpen(id)}
-      >
-        <div>{title}</div>
-        <ChevronDownIcon
-          className="accordion-item__chevron"
-          // style={{
-          //   width: "1.2rem",
-          //   transition: "all 0.2s ease-out",
-          //   rotate: isOpen ? "180deg" : "0deg",
-          // }}
-        />
-      </div>
-      <div className="accordion-item__content">{children}</div>
-      {/* {isOpen && <div className="accordion-item__content">{item.text}</div>} */}
-    </div>
+    <WrapperAccordionItem
+      className={`accordion-item ${isOpen ? "accordion__expanded" : ""}`}
+    >
+      <AccordionItemHeader onClick={() => onOpen(id)}>
+        <Heading as="h6">{title}</Heading>
+        {isOpen ? (
+          <HiMinus className="accordion-item__chevron" />
+        ) : (
+          <HiPlus className="accordion-item__chevron" />
+        )}
+      </AccordionItemHeader>
+      <AccordionItemContent className="accordion-item__content">
+        <SubHeading as="sm" varient="primary">
+          {children}
+        </SubHeading>
+      </AccordionItemContent>
+    </WrapperAccordionItem>
   );
 }
+// Styles
+const WrapperAccordion = styled.div`
+  max-width: 50rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  color: rgb(var(--color-secondary-0));
+`;
+
+const AccordionItemHeader = styled.div`
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.25rem;
+`;
+
+const AccordionItemContent = styled.div`
+  transition: all 0.3s ease-in-out;
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  line-height: 1.6;
+  padding: 0 1rem;
+`;
+
+const WrapperAccordionItem = styled.div`
+  &:not(:last-child) {
+    border-bottom: 1px solid #e0e2e5;
+  }
+  /* &.accordion__expanded {
+    padding: 1rem;
+    opacity: 1;
+    max-height: 100vh;
+    transition: all 0.2s ease-in-out;
+  } */
+  & AccordionItemContent {
+    padding: 1rem;
+    opacity: 1;
+    max-height: 100vh;
+    transition: all 0.2s ease-in-out;
+  }
+  /* &.accordion__expanded {
+    rotate: 180deg;
+  } */
+  /* &.accordion-item__chevron {
+    rotate: 180deg;
+  } */
+`;
