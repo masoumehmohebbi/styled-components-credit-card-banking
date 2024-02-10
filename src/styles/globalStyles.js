@@ -91,7 +91,7 @@ export const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-
+  padding: 0rem 1rem;
   background: linear-gradient(
     78deg,
     rgba(31, 77, 32, 1) 0%,
@@ -119,11 +119,13 @@ export const Wrapper = styled.div`
   align-items: center;
   padding: 10px 0px;
   flex-wrap: wrap;
+  flex-direction: column;
 
   justify-content: ${(props) => props.varient === "primary" && "space-between"};
   gap: ${(props) => (props.varient === "primary" ? "25px" : "10px")};
 
   @media (min-width: 768px) {
+    flex-direction: row;
     flex-wrap: nowrap;
     display: ${(props) => props.varient === "secondary" && "none"};
     ${(props) =>

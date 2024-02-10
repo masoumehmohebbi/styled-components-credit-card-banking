@@ -18,7 +18,6 @@ const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-
   align-items: center;
   padding: 10px 1rem;
 
@@ -33,10 +32,6 @@ const Ul = styled.ul`
     width: 300px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
-
-    li {
-      color: #fff;
-    }
   }
 `;
 
