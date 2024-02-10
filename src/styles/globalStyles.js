@@ -105,13 +105,9 @@ export const Container = styled.div`
     overflow: hidden;
     width: 100%;
     background-repeat: repeat;
-    top: 5rem;
+    top: 3.9rem;
   }
-  & .foo {
-    width: 100%;
-    position: absolute;
-    background-image: url("/images/dora.svg");
-  }
+
   @media (min-width: 768px) {
     max-width: 1024px;
     padding: 0rem 1rem 1rem 1rem;
