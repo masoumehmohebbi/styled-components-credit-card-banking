@@ -117,14 +117,13 @@ Error generating stack: `+i.message+`
     src: url("/fonts//Vazirmatn-Black.woff2") format("woff2");
     }
 `,Jm=ie.div`
-  /* background-color: rgb(var(--color-primary-800)); */
   overflow: hidden;
   margin: 0px auto;
   width: 100%;
   display: flex;
   position: relative;
   flex-direction: column;
-  /* padding: 0rem 1rem; */
+  z-index: 2;
 
   background: linear-gradient(
     78deg,
@@ -139,16 +138,17 @@ Error generating stack: `+i.message+`
     overflow: hidden;
     width: 100%;
     top: 3.9rem;
+    z-index: 1;
   }
 
   @media (min-width: 768px) {
     max-width: 1024px;
-    /* padding: 0rem 1rem 1rem 1rem; */
   }
 `,en=ie.div`
   display: flex;
   align-items: center;
-  padding: 10px 1rem;
+  /* padding: 10px 1rem; */
+  padding: 10px 0.1rem;
   flex-wrap: wrap;
 
   justify-content: ${e=>e.varient==="primary"&&"space-between"};
@@ -156,6 +156,7 @@ Error generating stack: `+i.message+`
 
   ${e=>e.varient!==ge`
         flex-direction: column;
+        padding: 10px 1rem;
       `};
 
   @media (min-width: 768px) {
@@ -182,8 +183,8 @@ Error generating stack: `+i.message+`
 
   & .app-icon {
     margin-right: 0px;
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 80px;
     @media (min-width: 600px) {
       width: 110px;
       height: 110px;
@@ -194,7 +195,7 @@ Error generating stack: `+i.message+`
   }
 `,Ci=ie.div`
   margin-top: 1rem;
-  padding: 50px 1rem;
+  padding: 60px 1rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 60px;
@@ -283,14 +284,28 @@ Error generating stack: `+i.message+`
   border-radius: 64px;
   border: 1px solid rgb(var(--color-primary-50));
   color: rgb(var(--color-primary-50));
+
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(var(--color-primary-50));
+    color: rgb(var(--color-primary-100));
+    transition-duration: 500ms;
+  }
 `,cs=ie(kd)`
   margin-top: 0.9rem;
   display: flex;
   align-items: center;
+  z-index: 9999;
 
   & img {
     width: 20px;
     height: 20px;
+  }
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(var(--color-primary-50));
+    color: rgb(var(--color-primary-100));
+    transition-duration: 500ms;
   }
 `,Z=ie.h1`
   color: rgb(var(--color-secondary-0));
