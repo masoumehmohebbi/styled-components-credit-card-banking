@@ -7,4 +7,11 @@ export const Button = styled.button`
   border-radius: 64px;
   border: 1px solid rgb(var(--color-primary-50));
   color: rgb(var(--color-primary-50));
+
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(var(--color-primary-50));
+    color: rgb(var(--color-primary-100));
+    transition-duration: 500ms;
+  }
 `;

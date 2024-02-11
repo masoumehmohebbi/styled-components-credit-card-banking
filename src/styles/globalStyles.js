@@ -84,14 +84,13 @@ const GlobaloStyle = createGlobalStyle`
 export default GlobaloStyle;
 
 export const Container = styled.div`
-  /* background-color: rgb(var(--color-primary-800)); */
   overflow: hidden;
   margin: 0px auto;
   width: 100%;
   display: flex;
   position: relative;
   flex-direction: column;
-  /* padding: 0rem 1rem; */
+  z-index: 2;
 
   background: linear-gradient(
     78deg,
@@ -106,18 +105,19 @@ export const Container = styled.div`
     overflow: hidden;
     width: 100%;
     top: 3.9rem;
+    z-index: 1;
   }
 
   @media (min-width: 768px) {
     max-width: 1024px;
-    /* padding: 0rem 1rem 1rem 1rem; */
   }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 10px 1rem;
+  /* padding: 10px 1rem; */
+  padding: 10px 0.1rem;
   flex-wrap: wrap;
 
   justify-content: ${(props) => props.varient === "primary" && "space-between"};
@@ -128,6 +128,7 @@ export const Wrapper = styled.div`
     ("appIcons" &&
       css`
         flex-direction: column;
+        padding: 10px 1rem;
       `)};
 
   @media (min-width: 768px) {
@@ -171,7 +172,7 @@ export const Wrapper = styled.div`
 `;
 export const WrapperProcces = styled.div`
   margin-top: 1rem;
-  padding: 50px 1rem;
+  padding: 60px 1rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 60px;
