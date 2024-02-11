@@ -158,8 +158,8 @@ export const Wrapper = styled.div`
 
   & .app-icon {
     margin-right: 0px;
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 80px;
     @media (min-width: 600px) {
       width: 110px;
       height: 110px;
