@@ -5,12 +5,20 @@ import { SubHeading } from "./SubHeading";
 import Logo from "/logo.svg";
 
 const Nav = styled.nav`
+  background: linear-gradient(
+    78deg,
+    rgba(31, 77, 32, 1) 0%,
+    rgba(26, 30, 28, 1) 100%
+  );
+  padding: 0rem 1rem;
   position: fixed;
   top: 0px;
-  right: 0px;
   height: 55px;
   display: flex;
   width: 100%;
+  max-width: 1024px;
+  margin: 0px auto;
+
   @media (max-width: 768px) {
     width: 100%;
     background: linear-gradient(

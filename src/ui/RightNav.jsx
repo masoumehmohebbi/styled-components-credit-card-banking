@@ -6,32 +6,35 @@ import Logo from "/logo.svg";
 import styled from "styled-components";
 
 const Ul = styled.ul`
-  width: 100%;
-  background: linear-gradient(
+  /* background: linear-gradient(
     78deg,
     rgba(31, 77, 32, 1) 0%,
     rgba(26, 30, 28, 1) 100%
-  );
+  ); */
 
-  right: 0px;
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   padding: 10px 1rem;
+  width: 100%;
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     background-color: rgb(var(--color-primary-100));
-    position: fixed;
+
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-    top: 0;
-    right: 0;
+
+    position: fixed;
+    top: 0px;
     height: 100vh;
     width: 300px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
+  }
+  @media (min-width: 768px) {
+    padding: 10px 0rem;
   }
 `;
 

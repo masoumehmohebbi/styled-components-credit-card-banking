@@ -84,14 +84,15 @@ const GlobaloStyle = createGlobalStyle`
 export default GlobaloStyle;
 
 export const Container = styled.div`
-  background-color: rgb(var(--color-primary-800));
+  /* background-color: rgb(var(--color-primary-800)); */
   overflow: hidden;
-  margin: auto;
-  max-width: 100%;
+  margin: 0px auto;
+  width: 100%;
   display: flex;
   position: relative;
   flex-direction: column;
-  padding: 0rem 1rem;
+  /* padding: 0rem 1rem; */
+
   background: linear-gradient(
     78deg,
     rgba(31, 77, 32, 1) 0%,
@@ -104,20 +105,19 @@ export const Container = styled.div`
     background-size: cover;
     overflow: hidden;
     width: 100%;
-    background-repeat: repeat;
     top: 3.9rem;
   }
 
   @media (min-width: 768px) {
     max-width: 1024px;
-    padding: 0rem 1rem 1rem 1rem;
+    /* padding: 0rem 1rem 1rem 1rem; */
   }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 10px 0px;
+  padding: 10px 1rem;
   flex-wrap: wrap;
   flex-direction: column;
 
@@ -138,7 +138,8 @@ export const Wrapper = styled.div`
   }
   @media (max-width: 768px) {
     display: ${(props) => props.varient === "logo" && "none"};
-    flex-direction: ${(props) => props.varient === "logoFooter" && "row"};
+    flex-direction: ${(props) =>
+      props.varient === (("logoFooter" || "appIcons") && "row")};
 
     ${(props) =>
       props.varient === "secondary" &&
@@ -165,7 +166,7 @@ export const Wrapper = styled.div`
 `;
 export const WrapperProcces = styled.div`
   margin-top: 1rem;
-  padding: 50px 0px;
+  padding: 50px 1rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 60px;
@@ -187,7 +188,7 @@ export const WrapperProcces = styled.div`
 `;
 export const WrapperFooter = styled.footer`
   color: rgb(var(--color-secondary-0));
-  padding: 50px 0px;
+  padding: 50px 1rem;
   display: grid;
   gap: 60px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
