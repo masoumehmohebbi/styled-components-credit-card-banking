@@ -119,10 +119,16 @@ export const Wrapper = styled.div`
   align-items: center;
   padding: 10px 1rem;
   flex-wrap: wrap;
-  flex-direction: column;
 
   justify-content: ${(props) => props.varient === "primary" && "space-between"};
   gap: ${(props) => (props.varient === "primary" ? "25px" : "10px")};
+
+  ${(props) =>
+    props.varient !==
+    ("appIcons" &&
+      css`
+        flex-direction: column;
+      `)};
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -138,8 +144,7 @@ export const Wrapper = styled.div`
   }
   @media (max-width: 768px) {
     display: ${(props) => props.varient === "logo" && "none"};
-    flex-direction: ${(props) =>
-      props.varient === (("logoFooter" || "appIcons") && "row")};
+    flex-direction: ${(props) => props.varient === ("logoFooter" && "row")};
 
     ${(props) =>
       props.varient === "secondary" &&
