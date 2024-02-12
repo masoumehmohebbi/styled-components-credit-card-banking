@@ -11,13 +11,13 @@
   transition: all 0.3s ease-out;
   rotate: 0deg;
 }
-.backimage {
+.backgroundDora {
   height: 100%;
-  background: transparent url(/images/dora.svg) repeat scroll 0% 0%;
-
+  background-image: url(/images/dora.svg);
+  ​​​background-repeat: repeat-y;
   position: absolute;
-  background-position: fixed;
-  background-size: cover;
+  background-position: 0% 0%;
+  background-size: contain;
   overflow: hidden;
   width: 100%;
   top: 3.9rem;

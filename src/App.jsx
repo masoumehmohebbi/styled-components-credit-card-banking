@@ -13,7 +13,7 @@ function App() {
   return (
     <Container>
       {/* <img className="svg" src="images/dora.svg" alt="dora" /> */}
-      <div className="backimage"></div>
+      <div className="backgroundDora"></div>
       <GlobaloStyle />
       {/* <Navbar /> */}
 
