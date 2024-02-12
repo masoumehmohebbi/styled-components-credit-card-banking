@@ -1,7 +1,7 @@
-import { Wrapper, WrapperFooter } from "../styles/globalStyles";
 import { Heading } from "./Heading";
 import { Link } from "./Link";
 import { SubHeading } from "./SubHeading";
+import { Wrapper, WrapperFooter } from "./Wrapper";
 import Logo from "/logo.svg";
 
 const Footer = () => {

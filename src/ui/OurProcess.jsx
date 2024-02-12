@@ -1,14 +1,14 @@
-import { WrapperProcces } from "../styles/globalStyles";
 import { ButtonIcon } from "./ButtonIcon";
 import { Heading } from "./Heading";
 import { SubHeading } from "./SubHeading";
 import { HiArrowRight } from "react-icons/hi";
 import CreditCart from "/images/credit-cart.svg";
+import { WrapperProcces } from "./Wrapper";
 
 const OurProcess = () => {
   return (
-    <WrapperProcces>
-      <img src={CreditCart} alt="" />
+    <WrapperProcces varient="proccesImg">
+      <img src={CreditCart} alt="Credit Cart" />
       <div>
         <Heading as="h2">کارت اعتباری مناسب شما پیدا شد</Heading>
         <SubHeading as="sm">

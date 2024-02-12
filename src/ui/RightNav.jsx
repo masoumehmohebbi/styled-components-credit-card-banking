@@ -1,17 +1,11 @@
-import { Wrapper } from "../styles/globalStyles";
 import { Button } from "./Button";
 import { Link } from "./Link";
 import { SubHeading } from "./SubHeading";
+import { Wrapper } from "./Wrapper";
 import Logo from "/logo.svg";
 import styled from "styled-components";
 
 const Ul = styled.ul`
-  /* background: linear-gradient(
-    78deg,
-    rgba(31, 77, 32, 1) 0%,
-    rgba(26, 30, 28, 1) 100%
-  ); */
-
   list-style: none;
   display: flex;
   flex-flow: row nowrap;

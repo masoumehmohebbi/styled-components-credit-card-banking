@@ -1,5 +1,4 @@
 import { HiArrowRight } from "react-icons/hi";
-import { AboutBox, Wrapper, WrapperProcces } from "../styles/globalStyles";
 import { ButtonIcon } from "./ButtonIcon";
 import { Heading } from "./Heading";
 import { SubHeading } from "./SubHeading";
@@ -8,6 +7,57 @@ import Quotate from "/images/quotation.svg";
 import User1 from "/images/user-1.svg";
 import User2 from "/images/user-2.svg";
 import User3 from "/images/user-3.svg";
+import { Wrapper, WrapperProcces } from "./Wrapper";
+import { styled, css } from "styled-components";
+
+export const AboutBox = styled.div`
+  ${(props) =>
+    props.varient === "primary" &&
+    css`
+      display: grid;
+      gap: 60px;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+      }
+    `}
+  ${(props) =>
+    props.varient !== "primary" &&
+    css`
+      display: flex;
+      justify-content: space-between;
+    `}
+
+
+  margin: 0px auto;
+  align-items: center;
+  padding-top: 10px;
+
+  background-color: ${(props) =>
+    props.varient === "boxPadding" && "rgb(var(--color-primary-100))"};
+
+  padding: ${(props) => props.varient === "boxPadding" && " 10px 60px"};
+
+  border-radius: ${(props) => props.varient === "boxPadding" && "12px"};
+
+  gap: ${(props) => props.varient !== "boxPadding" && "45px"};
+
+  & article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem 0rem;
+  }
+
+  & .user {
+    margin: 0rem 0.7rem;
+  }
+  @media (min-width: 768px) {
+    max-width: 878px;
+  }
+`;
 
 const FindCard = () => {
   return (

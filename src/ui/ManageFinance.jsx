@@ -1,9 +1,9 @@
-import { Wrapper, WrapperProcces } from "../styles/globalStyles";
 import { Heading } from "./Heading";
 import { SubHeading } from "./SubHeading";
 import EasyManageFinance from "/images/ManageFinance.svg";
 import AppStore from "/images/App_Store.svg";
 import GooglePlay from "/images/Google_Play.svg";
+import { Wrapper, WrapperProcces } from "./Wrapper";
 
 const ManageFinance = () => {
   return (
@@ -15,7 +15,7 @@ const ManageFinance = () => {
           استفاده آسان از برنامه موبایلی که در اندروید و ios پشتیبانی می کند.
         </SubHeading>
 
-        <Wrapper varient="appIcons">
+        <Wrapper varient="appIcons" style={{ flexDirection: "row" }}>
           <img className="app-icon" src={AppStore} alt="app store" />
           <img className="app-icon" src={GooglePlay} alt="google play" />
         </Wrapper>

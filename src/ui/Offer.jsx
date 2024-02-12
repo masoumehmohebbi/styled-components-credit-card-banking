@@ -1,4 +1,4 @@
-import { AboutBox } from "../styles/globalStyles";
+import { AboutBox } from "./FindCard";
 import { Heading } from "./Heading";
 import { SubHeading } from "./SubHeading";
 import Offer1 from "/images/offer-1.svg";

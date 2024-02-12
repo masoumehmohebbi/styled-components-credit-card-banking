@@ -1,4 +1,4 @@
-import GlobaloStyle, { Container } from "./styles/globalStyles";
+import GlobaloStyle from "./styles/globalStyles";
 import CreateCard from "./ui/CreateCard";
 import FAQs from "./ui/FAQs";
 import FindCard from "./ui/FindCard";
@@ -7,17 +7,15 @@ import ManageFinance from "./ui/ManageFinance";
 import Offer from "./ui/Offer";
 import OurProcess from "./ui/OurProcess";
 import "./index.css";
-import Navbar2 from "./ui/Nav";
+import Navbar from "./ui/Navbar";
+import { Container } from "./ui/Container";
 
 function App() {
   return (
     <Container>
-      {/* <img className="svg" src="images/dora.svg" alt="dora" /> */}
       <div className="backgroundDora"></div>
       <GlobaloStyle />
-      {/* <Navbar /> */}
-
-      <Navbar2 />
+      <Navbar />
       <OurProcess />
       <Offer />
       <CreateCard />

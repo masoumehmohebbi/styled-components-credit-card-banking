@@ -1,9 +1,9 @@
 import { HiArrowRight } from "react-icons/hi";
-import { WrapperProcces } from "../styles/globalStyles";
 import { ButtonIcon } from "./ButtonIcon";
 import { Heading } from "./Heading";
 import { SubHeading } from "./SubHeading";
 import CreateCridietCard from "/images/createCard.svg";
+import { WrapperProcces } from "./Wrapper";
 
 const CreateCard = () => {
   return (
