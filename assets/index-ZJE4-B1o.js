@@ -502,4 +502,4 @@ Error generating stack: `+i.message+`
     display: flex;
     justify-content: space-between;
   }
-`,A0=()=>p.jsxs(F0,{children:[p.jsxs(en,{varient:"secondary",children:[p.jsx("img",{src:fs,alt:"logo"}),p.jsx(X,{as:"sm",children:"گرین‌بانک"})]}),p.jsx(M0,{})]});function U0(){return p.jsxs(Jm,{children:[p.jsx("div",{className:"backimage"}),p.jsx(Zm,{}),p.jsx(A0,{}),p.jsx(R0,{}),p.jsx(O0,{}),p.jsx(a0,{}),p.jsx(k0,{}),p.jsx(v0,{}),p.jsx(P0,{}),p.jsx(E0,{})]})}lo.createRoot(document.getElementById("root")).render(p.jsx(ue.StrictMode,{children:p.jsx(U0,{})}));
+`,A0=()=>p.jsxs(F0,{children:[p.jsxs(en,{varient:"secondary",children:[p.jsx("img",{src:fs,alt:"logo"}),p.jsx(X,{as:"sm",children:"گرین‌بانک"})]}),p.jsx(M0,{})]});function U0(){return p.jsxs(Jm,{children:[p.jsx("div",{className:"backgroundDora"}),p.jsx(Zm,{}),p.jsx(A0,{}),p.jsx(R0,{}),p.jsx(O0,{}),p.jsx(a0,{}),p.jsx(k0,{}),p.jsx(v0,{}),p.jsx(P0,{}),p.jsx(E0,{})]})}lo.createRoot(document.getElementById("root")).render(p.jsx(ue.StrictMode,{children:p.jsx(U0,{})}));
