@@ -123,7 +123,6 @@ Error generating stack: `+i.message+`
   display: flex;
   position: relative;
   flex-direction: column;
-  z-index: 2;
 
   background: linear-gradient(
     78deg,
@@ -138,7 +137,6 @@ Error generating stack: `+i.message+`
     overflow: hidden;
     width: 100%;
     top: 3.9rem;
-    z-index: 1;
   }
 
   @media (min-width: 768px) {
@@ -295,17 +293,11 @@ Error generating stack: `+i.message+`
   margin-top: 0.9rem;
   display: flex;
   align-items: center;
-  z-index: 9999;
+  position: absolute;
 
   & img {
     width: 20px;
     height: 20px;
-  }
-  cursor: pointer;
-  &:hover {
-    background-color: rgb(var(--color-primary-50));
-    color: rgb(var(--color-primary-100));
-    transition-duration: 500ms;
   }
 `,Z=ie.h1`
   color: rgb(var(--color-secondary-0));
@@ -510,4 +502,4 @@ Error generating stack: `+i.message+`
     display: flex;
     justify-content: space-between;
   }
-`,A0=()=>p.jsxs(F0,{children:[p.jsxs(en,{varient:"secondary",children:[p.jsx("img",{src:fs,alt:"logo"}),p.jsx(X,{as:"sm",children:"گرین‌بانک"})]}),p.jsx(M0,{})]});function U0(){return p.jsxs(Jm,{children:[p.jsx("img",{className:"svg",src:"images/dora.svg",alt:"dora"}),p.jsx(Zm,{}),p.jsx(A0,{}),p.jsx(R0,{}),p.jsx(O0,{}),p.jsx(a0,{}),p.jsx(k0,{}),p.jsx(v0,{}),p.jsx(P0,{}),p.jsx(E0,{})]})}lo.createRoot(document.getElementById("root")).render(p.jsx(ue.StrictMode,{children:p.jsx(U0,{})}));
+`,A0=()=>p.jsxs(F0,{children:[p.jsxs(en,{varient:"secondary",children:[p.jsx("img",{src:fs,alt:"logo"}),p.jsx(X,{as:"sm",children:"گرین‌بانک"})]}),p.jsx(M0,{})]});function U0(){return p.jsxs(Jm,{children:[p.jsx("div",{className:"backimage"}),p.jsx(Zm,{}),p.jsx(A0,{}),p.jsx(R0,{}),p.jsx(O0,{}),p.jsx(a0,{}),p.jsx(k0,{}),p.jsx(v0,{}),p.jsx(P0,{}),p.jsx(E0,{})]})}lo.createRoot(document.getElementById("root")).render(p.jsx(ue.StrictMode,{children:p.jsx(U0,{})}));
