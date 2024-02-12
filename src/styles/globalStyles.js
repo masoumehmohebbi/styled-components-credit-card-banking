@@ -90,7 +90,6 @@ export const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  z-index: 2;
 
   background: linear-gradient(
     78deg,
@@ -105,7 +104,6 @@ export const Container = styled.div`
     overflow: hidden;
     width: 100%;
     top: 3.9rem;
-    z-index: 1;
   }
 
   @media (min-width: 768px) {
