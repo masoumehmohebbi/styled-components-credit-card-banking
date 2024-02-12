@@ -7,7 +7,7 @@ import { WrapperProcces } from "./Wrapper";
 
 const OurProcess = () => {
   return (
-    <WrapperProcces varient="proccesImg">
+    <WrapperProcces varient="proccesImg" id="whyUs">
       <img src={CreditCart} alt="Credit Cart" />
       <div>
         <Heading as="h2">کارت اعتباری مناسب شما پیدا شد</Heading>

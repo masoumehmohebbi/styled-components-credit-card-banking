@@ -42,16 +42,16 @@ const RightNav = ({ open }) => {
         </Wrapper>
         <Wrapper>
           <span>
-            <Link href="#">چرا ما </Link>
+            <Link href="#whyUs">چرا ما </Link>
           </span>
           <span>
-            <Link href="#">پیشنهادات</Link>
+            <Link href="#offer">پیشنهادات</Link>
           </span>
           <span>
-            <Link href="#">سوالات متداول</Link>
+            <Link href="#fAQs">سوالات متداول</Link>
           </span>
           <span>
-            <Link href="#"> خدمات </Link>
+            <Link href="#services"> خدمات </Link>
           </span>
         </Wrapper>
         <Button>ارتباط با ما</Button>

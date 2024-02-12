@@ -7,7 +7,7 @@ import Offer3 from "/images/offer-3.svg";
 
 const Offer = () => {
   return (
-    <div>
+    <div id="offer">
       <AboutBox varient="boxPadding">
         <article>
           <Heading as="h3">16y</Heading>

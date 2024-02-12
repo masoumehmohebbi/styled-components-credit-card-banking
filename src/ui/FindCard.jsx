@@ -62,7 +62,7 @@ export const AboutBox = styled.div`
 const FindCard = () => {
   return (
     <>
-      <WrapperProcces>
+      <WrapperProcces id="services">
         <div>
           <Heading as="h3">کارت اعتباری مناسب را برای خود پیدا کنید </Heading>
           <SubHeading as="sm">
