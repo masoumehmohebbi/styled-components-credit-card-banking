@@ -2,6 +2,10 @@
 
 <h2>This is a landing page that developped with Styled-Components and React-Js.</h2>
  
+
+https://github.com/masoumehmohebbi/styled-components-credit-card-banking/assets/88876100/4f661e2d-7bd1-4667-945b-87ea622a6528
+
+
    <h2>📦 Used Packages</h2>
    <ul>
       <li>React</li>
