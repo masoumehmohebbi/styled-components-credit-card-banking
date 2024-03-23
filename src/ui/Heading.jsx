@@ -14,7 +14,7 @@ export const Heading = styled.h1`
       font-size: 23px;
       font-weight: bold;
       @media (min-width: 768px) {
-        font-size: 48px;
+        font-size: 40px;
         font-weight: bold;
       }
     `}

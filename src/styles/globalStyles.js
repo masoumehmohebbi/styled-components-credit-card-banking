@@ -1,4 +1,18 @@
 import { createGlobalStyle } from "styled-components";
+import VazirReqularWoff2 from "/fonts/Vazirmatn-Regular.woff2";
+import VazirReqularWoff from "/fonts/Vazirmatn-Regular.woff";
+import VazirReqularTtf from "/fonts/Vazirmatn-Regular.ttf";
+import VazirReqularEot from "/fonts/Vazirmatn-Regular.eot";
+
+import VazirBoldWoff2 from "/fonts/Vazirmatn-Bold.woff2";
+import VazirBoldWoff from "/fonts/Vazirmatn-Bold.woff";
+import VazirBoldTtf from "/fonts/Vazirmatn-Bold.ttf";
+import VazirBoldEot from "/fonts/Vazirmatn-Bold.eot";
+
+import VazirBlackWoff2 from "/fonts/Vazirmatn-Black.woff2";
+import VazirBlackWoff from "/fonts/Vazirmatn-Black.woff";
+import VazirBlackTtf from "/fonts/Vazirmatn-Black.ttf";
+import VazirBlackEot from "/fonts/Vazirmatn-Black.eot";
 
 const GlobaloStyle = createGlobalStyle`
     :root{
@@ -10,6 +24,37 @@ const GlobaloStyle = createGlobalStyle`
 
         --color-secondary-50: 173, 178, 177;
         --color-secondary-0: 255, 255, 255;
+    }
+
+    @font-face {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 400;
+    src: url(${VazirReqularWoff2}) format('woff2'),
+        url(${VazirReqularWoff}) format('woff'),
+        url(${VazirReqularTtf}) format('ttf'),
+        url(${VazirReqularEot}) format('eot'),
+    }
+    
+
+    @font-face {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 700;
+    src: url(${VazirBoldWoff2}) format('woff2'),
+        url(${VazirBoldWoff}) format('woff'),
+        url(${VazirBoldTtf}) format('ttf'),
+        url(${VazirBoldEot}) format('eot'),
+    }
+
+    @font-face {
+    font-family: "Vazir";
+    font-style: normal;
+    font-weight: 900;
+    src: url(${VazirBlackWoff2}) format('woff2'),
+        url(${VazirBlackWoff}) format('woff'),
+        url(${VazirBlackTtf}) format('ttf'),
+        url(${VazirBlackEot}) format('eot'),
     }
     
     html,
@@ -40,25 +85,6 @@ const GlobaloStyle = createGlobalStyle`
     list-style: none;
   }
   
-    @font-face {
-    font-family: "Vazir";
-    font-style: normal;
-    font-weight: 400;
-    src: url("/fonts/Vazirmatn-Regular.woff2") format("woff2");
-    }
 
-    @font-face {
-    font-family: "Vazir";
-    font-style: normal;
-    font-weight: 700;
-    src: url("/fonts/Vazirmatn-Bold.woff2") format("woff2");
-    }
-
-    @font-face {
-    font-family: "Vazir";
-    font-style: normal;
-    font-weight: 900;
-    src: url("/fonts//Vazirmatn-Black.woff2") format("woff2");
-    }
 `;
 export default GlobaloStyle;
